@@ -1,8 +1,13 @@
-CREATE TABLE lucias_clothes (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, quantity INTEGER);
-INSERT INTO lucias_clothes VALUES (1, "sweater",20, 5 );
-INSERT INTO lucias_clothes VALUES (2, "onesies", 10, 8);
-INSERT INTO lucias_clothes VALUES (3, "pants", 8, 2 );
-INSERT INTO lucias_clothes VALUES (4, "long sleeve shirts", 12, 1);
-INSERT INTO lucias_clothes VALUES (5, "bamboo footies", 45, 2);
-SELECT * FROm lucias_clothes ORDER BY price desc; 
+-- Create a database of my childs closet
+
+CREATE TABLE Lucias_clothes (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, quantity INTEGER);
+INSERT INTO Lucias_clothes VALUES (1, "sweater",20, 5 );
+INSERT INTO Lucias_clothes VALUES (2, "onesies", 10, 8);
+INSERT INTO Lucias_clothes VALUES (3, "pants", 8, 2 );
+INSERT INTO Lucias_clothes VALUES (4, "long sleeve shirts", 12, 1);
+INSERT INTO Lucias_clothes VALUES (5, "bamboo footies", 45, 2);
+
+--What items are most expensive to least?
+SELECT * FROm Lucias_clothes ORDER BY price desc; 
+-- How much does Lucias closet cost?
 SELECT SUM (quantity) FROM lucias_clothes
